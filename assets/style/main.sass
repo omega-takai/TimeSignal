@@ -1,0 +1,37 @@
+// scope    = global
+// fileName = main.sass
+
+// Library =====================================
+@import 'modern-css-reset'
+// Original Chunk ==============================
+@import _chunk
+
+// Style =======================================
+html
+  color: fonts('color')
+  font:
+    family: fonts('family')
+    size: fonts('size')
+    weight: fonts('normal')
+    feature-settings: fonts('kerning')
+  // letter-spacing: fonts('space')
+
+// animation ===============================
+// SEE: https://jp.vuejs.org/v2/guide/transitions.html#トランジションクラス
+// SEE: https://blogs.adobe.com/japan/cc-web-ui-ux-animation-principles-tips-tricks-best-practices/
+
+// Enter
+.v-enter
+  opacity: 0
+.v-enter-to
+  opacity: 1
+.v-enter-active
+  transition: opacity 0.6s ease-out
+
+// Leave
+.v-leave
+  opacity: 1
+.v-leave-to
+  opacity: 0
+.v-leave-active
+  transition: opacity 0.6s ease-in

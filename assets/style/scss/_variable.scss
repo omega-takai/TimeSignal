@@ -1,0 +1,62 @@
+// global
+// variables
+
+// screen size - - - - - - - - - - - - - - - -
+// ref: https://hashimotosan.hatenablog.jp/entry/2019/05/28/164834
+$screens: (
+  "large": 960px,
+  "medium": 768px,
+  "small": 560px,
+);
+@function screens($key) {
+  @return map-get($screens, $key);
+}
+
+// color - - - - - - - - - - - - - - - - - - -
+$_white: white;
+$_black: black;
+$_fonts: #333;
+$colors: (
+  "white": rgba($_white, 1),
+  "font": rgba($_fonts, 1),
+  "black": rgba($_black, 1),
+);
+@function colors($key) {
+  @return map-get($colors, $key);
+}
+
+// fonts - - - - - - - - - - - - - - - - - - -
+$fonts: (
+  "family": #{
+    YakuHanJP, 'Noto Sans JP',
+    '-apple-system', BlinkMacSystemFont, 'Segoe UI',
+    'Hiragino Sans', 'Hiragino Kaku Gothic ProN',
+    Arial, Meiryo, sans-serif
+  },
+  "color": colors(font),
+  "normal": 400,
+  "bold": 700, // iOS激太り対策
+  "extraBold": 900,
+  "size": 16px,
+  "kerning": 'palt',
+  "space": 0.1em,
+  "lineHeight": 1.5,
+);
+@function fonts($key) {
+  @return map-get($fonts, $key);
+}
+
+$fontSize: (
+  "xxs": 1rem,
+  "xs": 1.2rem,
+  "small": 1.6rem,
+  "sl": 1.8rem,
+  "medium": 2rem,
+  "large": 2.2rem,
+  "xl": 2.4rem,
+  "xxl": 2.8rem,
+  "huge": 3.2rem,
+);
+@function fontSize($key) {
+  @return map-get($fontSize, $key);
+}
