@@ -1,10 +1,12 @@
 # TimeSignal
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/583e6094-4f8e-4073-9b34-3a0ca8c912ab/deploy-status)](https://app.netlify.com/sites/ttakai-time-signal/deploys)
+
 > Notify time at regular intervals
 
 ## DEMO
 
-WIP
+https://ttakai-time-signal.netlify.com/
 
 ## Build Setup
 

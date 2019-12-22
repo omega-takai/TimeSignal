@@ -15,10 +15,7 @@ export default {
 <style lang="sass" scoped>
 .VueToNuxtLogo
   display: inline-block
-  animation: turn 2s linear forwards 1s
-  // OSの設定、視差効果の影響あり
-  // animation-duration: 2s !important
-  // animation-iteration-count: infinite !important
+  animation: turn 2s linear forwards 1s !important
   transform: rotateX(180deg)
   position: relative
   overflow: hidden
