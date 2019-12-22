@@ -1,12 +1,10 @@
-# VueComponent
+# TimeSignal
 
-> My component playground
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ea54c294-043c-4351-95e8-5bb363f00457/deploy-status)](https://app.netlify.com/sites/takai-vue-components-storybook/deploys)
+> Notify time at regular intervals
 
 ## DEMO
 
-https://takai-vue-components-storybook.netlify.com/
+WIP
 
 ## Build Setup
 
@@ -23,6 +21,9 @@ $ yarn start
 
 # generate static project
 $ yarn generate
+
+# generate static project for GitHub Pages
+$ yarn generate:gh-pages
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+For detailed explanation on how things work, check out [Nuxt.js docs](https://ja.nuxtjs.org/).
