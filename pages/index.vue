@@ -4,30 +4,18 @@
       VueToNuxtLogo
       h1.title(v-text="'TimeSignal'")
       h2.subtitle(v-text="'Notify time at regular intervals'")
-      .links
-        BaseLinkButton(
-          class="linkItem"
-          colorType="green"
-          text="Documentation"
-          url="https://ja.nuxtjs.org/"
-        )
-        BaseLinkButton(
-          class="linkItem"
-          colorType="grey"
-          text="GitHub"
-          url="https://github.com/nuxt/nuxt.js"
-        )
+      AuthorInfo
 </template>
 
 <script>
 import VueToNuxtLogo from '~/components/Atom/VueToNuxtLogo/index.vue'
-import BaseLinkButton from '~/components/Atom/BaseLinkButton/index.vue'
+import AuthorInfo from '~/components/Molecule/AuthorInfo/index.vue'
 
 export default {
   name: 'PageIndex',
   components: {
     VueToNuxtLogo,
-    BaseLinkButton,
+    AuthorInfo,
   },
 }
 </script>
@@ -60,13 +48,4 @@ export default {
       color: #526488
       word-spacing: 5px
       padding-bottom: 15px
-
-    .links
-      display: flex
-      padding-top: 8px
-      align-items: center
-      justify-content: center
-
-      .linkItem
-        margin: 8px
 </style>

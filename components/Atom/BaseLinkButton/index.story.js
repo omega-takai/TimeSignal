@@ -4,10 +4,6 @@ import { action } from '@storybook/addon-actions'
 
 import BaseLinkButton from './index.vue'
 
-export default {
-  title: 'Atom|BaseLinkButton',
-}
-
 const colors = ['green', 'grey']
 
 storiesOf('Atom|BaseLinkButton', module)
