@@ -4,11 +4,14 @@ import Fiber from 'fibers'
 const repositoryName = 'TimeSignal'
 
 // `DEPLOY_ENV` が `GH_PAGES` の場合のみ `router.base = '/<repository-name>/'` を追加する
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: `/${repositoryName}/`,
-  }
-} : {}
+const routerBase =
+  process.env.DEPLOY_ENV === 'GH_PAGES'
+    ? {
+        router: {
+          base: `/${repositoryName}/`,
+        },
+      }
+    : {}
 // console.log('===== routerBase =====', routerBase)
 
 export default {

@@ -44,7 +44,7 @@ export default {
       default: '1x',
       validate(value) {
         return ['24', '1x', '1.5x', '2x', '3x', '4x'].includes(value)
-      }
+      },
     },
     iconName: {
       type: String,
@@ -64,8 +64,8 @@ export default {
           'InstagramIcon',
           'TwitterIcon',
         ].includes(value)
-      }
-    }
-  }
+      },
+    },
+  },
 }
 </script>

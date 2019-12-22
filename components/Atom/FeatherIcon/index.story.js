@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue'
-import { withKnobs, radios } from "@storybook/addon-knobs"
+import { withKnobs, radios } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 
 // component
@@ -27,7 +27,7 @@ storiesOf('Atom|FeatherIcon', module)
     components: { FeatherIcon },
     data() {
       return {
-        componentName: componentName
+        componentName,
       }
     },
     props: {
@@ -47,6 +47,6 @@ storiesOf('Atom|FeatherIcon', module)
         />
       </div>`,
     methods: {
-      action: action('clicked')
+      action: action('clicked'),
     },
   }))

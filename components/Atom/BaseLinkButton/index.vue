@@ -18,10 +18,12 @@ export default {
     text: {
       type: String,
       require: true,
+      default: 'Text',
     },
     url: {
       type: String,
       require: true,
+      default: 'https://ja.nuxtjs.org/',
     },
   },
   computed: {
@@ -33,7 +35,7 @@ export default {
     className() {
       return `button${this.upperCamelCase}`
     },
-  }
+  },
 }
 </script>
 

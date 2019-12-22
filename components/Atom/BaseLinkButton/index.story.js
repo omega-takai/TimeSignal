@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue'
-import { withKnobs } from "@storybook/addon-knobs"
+import { withKnobs } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 
 import BaseLinkButton from './index.vue'
@@ -16,7 +16,7 @@ storiesOf('Atom|BaseLinkButton', module)
     components: { BaseLinkButton },
     data() {
       return {
-        colors: colors
+        colors,
       }
     },
     template: `
