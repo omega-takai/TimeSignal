@@ -1,16 +1,18 @@
 <template lang="pug">
   .pageIndex.container
-    div
+    div.inner
       VueToNuxtLogo
-      h1.title(v-text="'VueComponent'")
-      h2.subtitle(v-text="'My component playground'")
+      h1.title(v-text="'TimeSignal'")
+      h2.subtitle(v-text="'Notify time at regular intervals'")
       .links
         BaseLinkButton(
+          class="linkItem"
           colorType="green"
           text="Documentation"
           url="https://ja.nuxtjs.org/"
         )
         BaseLinkButton(
+          class="linkItem"
           colorType="grey"
           text="GitHub"
           url="https://github.com/nuxt/nuxt.js"
@@ -40,6 +42,12 @@ export default {
     align-items: center
     text-align: center
 
+    .inner
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+
     .title
       display: block
       font-size: 100px
@@ -54,5 +62,11 @@ export default {
       padding-bottom: 15px
 
     .links
-      padding-top: 15px
+      display: flex
+      padding-top: 8px
+      align-items: center
+      justify-content: center
+
+      .linkItem
+        margin: 8px
 </style>
