@@ -5,25 +5,27 @@
       h1.title(v-text="'VueComponent'")
       h2.subtitle(v-text="'My component playground'")
       .links
-        a.button--green(
-          href="https://ja.nuxtjs.org/"
-          target="_blank"
-          v-text="'Documentation'"
+        BaseLinkButton(
+          colorType="green"
+          text="Documentation"
+          url="https://ja.nuxtjs.org/"
         )
-        a.button--grey(
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          v-text="'GitHub'"
+        BaseLinkButton(
+          colorType="grey"
+          text="GitHub"
+          url="https://github.com/nuxt/nuxt.js"
         )
 </template>
 
 <script>
 import VueToNuxtLogo from '~/components/Atom/VueToNuxtLogo/index.vue'
+import BaseLinkButton from '~/components/Atom/BaseLinkButton/index.vue'
 
 export default {
   name: 'PageIndex',
   components: {
     VueToNuxtLogo,
+    BaseLinkButton,
   },
 }
 </script>
