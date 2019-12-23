@@ -38,14 +38,14 @@ export default {
 
     .title
       display: block
-      font-size: 100px
-      color: #35495e
-      letter-spacing: 1px
+      font-size: TypeScale('h1')
+      font-weight: TypeWeight('h1')
+      color: colors('font')
 
     .subtitle
-      font-weight: 300
-      font-size: 42px
-      color: #526488
-      word-spacing: 5px
-      padding-bottom: 15px
+      display: block
+      font-size: TypeScale('h2')
+      font-weight: TypeWeight('h2')
+      color: colors('fontSub')
+      padding-bottom: 16px
 </style>

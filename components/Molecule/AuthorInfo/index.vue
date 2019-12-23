@@ -59,5 +59,4 @@ export default {
   font-size: 24px
   color: #526488
   word-spacing: 5px
-  padding-bottom: 8px
 </style>

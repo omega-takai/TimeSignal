@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "5.8.0",
+    "@nuxtjs/style-resources": "^1.0.0",
     "core-js": "2.6.10",
     "modern-css-reset": "1.0.4",
     "nuxt": "2.10.2",

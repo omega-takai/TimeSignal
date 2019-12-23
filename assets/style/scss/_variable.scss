@@ -18,8 +18,9 @@ $_black: black;
 $_fonts: #333;
 $colors: (
   "white": rgba($_white, 1),
-  "font": rgba($_fonts, 1),
   "black": rgba($_black, 1),
+  "font": rgba($_fonts, 1),
+  "fontSub": rgba($_fonts, 0.6),
 );
 @function colors($key) {
   @return map-get($colors, $key);
@@ -46,17 +47,30 @@ $fonts: (
   @return map-get($fonts, $key);
 }
 
-$fontSize: (
-  "xxs": 1rem,
-  "xs": 1.2rem,
-  "small": 1.6rem,
-  "sl": 1.8rem,
-  "medium": 2rem,
-  "large": 2.2rem,
-  "xl": 2.4rem,
-  "xxl": 2.8rem,
-  "huge": 3.2rem,
+$TypeScale: (
+  "h1": 6.00rem, // 96px
+  "h2": 3.75rem, // 60px
+  "h3": 4.8rem * 0.625, // 48px
+  "h4": 3.4rem * 0.625, // 34px
+  "subtitle": 1.6rem * 0.625, // 16px
+  "body": 1.4rem * 0.625, // 14px
+  "caption": 1.2rem * 0.625, // 12px
+  "overline": 1.0rem * 0.625, // 10px
 );
-@function fontSize($key) {
-  @return map-get($fontSize, $key);
+@function TypeScale($key) {
+  @return map-get($TypeScale, $key);
+}
+
+$TypeWeight: (
+  "h1": 400,
+  "h2": 400,
+  "h3": 700,
+  "h4": 700,
+  "subtitle": 700,
+  "body": 400,
+  "caption": 400,
+  "overline": 400,
+);
+@function TypeWeight($key) {
+  @return map-get($TypeWeight, $key);
 }
