@@ -13,20 +13,32 @@ module.exports = async ({ config }) => {
       test: /\.sass$/,
       use: [
         'vue-style-loader',
-        'css-loader',
+        {
+          loader: 'css-loader',
+          options: {
+            sourceMap: true,
+          },
+        },
         {
           loader: 'sass-loader',
           options: {
             sourceMap: true,
+            implementation: require('sass'),
             sassOptions: {
-              indentedSyntax: true
+              indentedSyntax: true,
+              fiber: require('fibers'),
             },
-            // data: `@import "styles/_chunk.sass";`,
-            data: `@import "@/assets/style/_chunk.sass";`,
+            // data: `@import "_chunk.sass";`,
+            // includePaths: [path.resolve(__dirname, '../assets/style/')]
+          },
+        },
+        {
+          loader: 'sass-resources-loader',
+          options: {
+            resources: path.resolve(__dirname, '../assets/style/_chunk.sass')
           }
-        }
+        },
       ],
-      include: path.resolve(__dirname, './'),
     },
     {
       test: /\.scss$/,
@@ -35,7 +47,26 @@ module.exports = async ({ config }) => {
         'css-loader',
         'sass-loader',
       ],
-      include: path.resolve(__dirname, './'),
+    },
+    {
+      test: /\.css$/,
+      sideEffects: true,
+      use: [
+        'vue-style-loader',
+        {
+          loader: 'css-loader',
+          options: { importLoaders: 1 }
+        },
+        {
+          loader: 'postcss-loader',
+          options: {
+            sourceMap: true,
+            plugins: [
+              require('autoprefixer')({ grid: 'autoplace' })
+            ],
+          }
+        }
+      ],
     },
     {
       test: /\.pug$/,
@@ -45,13 +76,12 @@ module.exports = async ({ config }) => {
           use: ['pug-plain-loader']
         },
       ],
-      include: path.resolve(__dirname, './'),
     }
   );
 
   config.resolve.alias = {
-    '~': path.join(__dirname, './'),
-    '@': path.join(__dirname, './'),
+    '~': path.join(__dirname, '../'),
+    '@': path.join(__dirname, '../'),
     vue$: 'vue/dist/vue.esm.js',
   }
 

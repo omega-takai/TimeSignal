@@ -16,6 +16,7 @@
     "test": "jest",
     "prestorybook": "yarn clean",
     "storybook": "start-storybook -c .storybook -p 6006",
+    "storybook:debug": "yarn storybook --debug-webpack",
     "build-storybook": "build-storybook -c .storybook -o .out"
   },
   "dependencies": {
@@ -53,6 +54,7 @@
     "rimraf": "3.0.0",
     "sass": "1.23.7",
     "sass-loader": "8.0.0",
+    "sass-resources-loader": "^2.0.1",
     "vue-jest": "4.0.0-beta.2"
   },
   "browserslist": [
