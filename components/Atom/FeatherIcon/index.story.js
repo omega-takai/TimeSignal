@@ -21,7 +21,7 @@ const componentName = [
   'TwitterIcon',
 ]
 
-storiesOf('Atom|FeatherIcon', module)
+storiesOf('Design System|Atom/FeatherIcon', module)
   .addDecorator(withKnobs)
   .add('normal', () => ({
     components: { FeatherIcon },

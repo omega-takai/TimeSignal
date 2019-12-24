@@ -6,7 +6,7 @@ import BaseLinkButton from './index.vue'
 
 const colors = ['green', 'grey']
 
-storiesOf('Atom|BaseLinkButton', module)
+storiesOf('Design System|Atom/BaseLinkButton', module)
   .addDecorator(withKnobs)
   .add('normal', () => ({
     components: { BaseLinkButton },
