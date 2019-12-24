@@ -16,6 +16,7 @@
     "test": "jest",
     "prestorybook": "yarn clean",
     "storybook": "start-storybook -c .storybook -p 6006",
+    "storybook:debug": "yarn storybook --debug-webpack",
     "build-storybook": "build-storybook -c .storybook -o .out"
   },
   "dependencies": {
