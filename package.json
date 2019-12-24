@@ -25,7 +25,8 @@
     "core-js": "2.6.10",
     "modern-css-reset": "1.0.4",
     "nuxt": "2.10.2",
-    "vue-feather-icons": "5.0.0"
+    "vue-feather-icons": "5.0.0",
+    "vue-styled-components": "^1.4.14"
   },
   "devDependencies": {
     "@babel/core": "7.7.4",

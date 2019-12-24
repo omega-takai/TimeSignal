@@ -1,6 +1,7 @@
 import { storiesOf } from '@storybook/vue'
 import { withKnobs } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
+import { FlexLayout, FlexItem } from '@/assets/styledComponent/component'
 
 import LinkButtonWithIcon from './index.vue'
 
@@ -11,24 +12,30 @@ const stories = storiesOf('Design System|Molecule/LinkButtonWithIcon', module)
 stories.addDecorator(withKnobs)
 
 stories.add('normal', () => ({
-  components: { LinkButtonWithIcon },
+  components: {
+    LinkButtonWithIcon,
+    FlexLayout,
+    FlexItem,
+  },
   data() {
     return {
       colors,
     }
   },
   template: `
-    <div style="margin: 8px;">
-      <LinkButtonWithIcon
+    <FlexLayout>
+      <FlexItem
         v-for="(color, i) in colors"
-        url="https://ja.nuxtjs.org/"
         :key="i"
-        :text="upperCamelCase(color)"
-        :colorType="color"
-        @click.native.prevent="action"
-        style="margin: 8px;"
-      />
-    </div>`,
+      >
+        <LinkButtonWithIcon
+          url="https://ja.nuxtjs.org/"
+          :text="upperCamelCase(color)"
+          :colorType="color"
+          @click.native.prevent="action"
+        />
+      </FlexItem>
+    </FlexLayout>`,
   methods: {
     action: action('clicked'),
     upperCamelCase(colorType) {
