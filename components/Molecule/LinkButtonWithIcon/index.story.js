@@ -1,11 +1,17 @@
 import { storiesOf } from '@storybook/vue'
-import { withKnobs } from '@storybook/addon-knobs'
+import { withKnobs, radios } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import { FlexLayout, FlexItem } from '@/assets/styledComponent/component'
 
 import LinkButtonWithIcon from './index.vue'
 
 const colors = ['green', 'grey']
+const icons = [
+  'TwitterIcon',
+  'FacebookIcon',
+  'GithubIcon',
+  'InstagramIcon',
+]
 
 const stories = storiesOf('Design System|Molecule/LinkButtonWithIcon', module)
 
@@ -22,6 +28,12 @@ stories.add('normal', () => ({
       colors,
     }
   },
+  props: {
+    iconName: {
+      type: String,
+      default: radios('iconName', icons, icons[0]),
+    },
+  },
   template: `
     <FlexLayout>
       <FlexItem
@@ -30,6 +42,7 @@ stories.add('normal', () => ({
       >
         <LinkButtonWithIcon
           url="https://ja.nuxtjs.org/"
+          :iconName="iconName"
           :text="upperCamelCase(color)"
           :colorType="color"
           @click.native.prevent="action"
