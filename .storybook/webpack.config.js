@@ -27,16 +27,9 @@ module.exports = async ({ config }) => {
             sassOptions: {
               indentedSyntax: true,
               fiber: require('fibers'),
+              includePaths: [path.resolve(__dirname, '../assets/style/_chunk.sass')]
             },
-            // data: `@import "_chunk.sass";`,
-            // includePaths: [path.resolve(__dirname, '../assets/style/')]
           },
-        },
-        {
-          loader: 'sass-resources-loader',
-          options: {
-            resources: path.resolve(__dirname, '../assets/style/_chunk.sass')
-          }
         },
       ],
     },

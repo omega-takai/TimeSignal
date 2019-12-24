@@ -54,7 +54,6 @@
     "rimraf": "3.0.0",
     "sass": "1.23.7",
     "sass-loader": "8.0.0",
-    "sass-resources-loader": "^2.0.1",
     "vue-jest": "4.0.0-beta.2"
   },
   "browserslist": [
