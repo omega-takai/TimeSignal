@@ -59,4 +59,5 @@ export default {
   font-size: 24px
   color: #526488
   word-spacing: 5px
+  text-align: center
 </style>
