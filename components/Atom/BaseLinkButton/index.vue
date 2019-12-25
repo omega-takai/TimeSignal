@@ -1,10 +1,12 @@
 <template lang="pug">
   a(
     target="_blank"
-    v-text="text"
+    :title="text"
     :href="url"
     :class="className"
   )
+    slot
+    span(v-text="text")
 </template>
 
 <script>
@@ -40,17 +42,17 @@ export default {
 
 <style lang="sass" scoped>
 @mixin _structure()
-  min-height: 3rem
-  min-width: 10rem
+  min-height: pix2rem(48)
+  min-width: pix2rem(160)
+  padding: pix2rem(8) pix2rem(16)
   max-width: 90vw
-  padding: 0.5rem 1rem
   display: inline-flex
   align-items: center
   justify-content: center
   line-height: 1.2
 
 @mixin _skin($_color)
-  border-radius: 4px
+  border-radius: pix2rem(4)
   border: 1px solid $_color
   color: $_color
   text-decoration: none

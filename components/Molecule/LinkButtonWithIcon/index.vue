@@ -59,9 +59,9 @@ export default {
 
 <style lang="sass" scoped>
 @mixin _structure()
-  height: 48px
-  width: 160px
-  padding: 0 16px
+  min-height: pix2rem(48)
+  min-width: pix2rem(160)
+  padding: pix2rem(8) pix2rem(16)
   display: inline-flex
   align-items: center
   justify-content: center
@@ -69,7 +69,7 @@ export default {
 
 @mixin _button($_color)
   @include _structure()
-  border-radius: 4px
+  border-radius: pix2rem(4)
   border: 1px solid $_color
   color: $_color
   text-decoration: none
@@ -79,7 +79,7 @@ export default {
     background-color: $_color
 
   .icon
-    margin-right: 8px
+    margin-right: pix2rem(8)
 
 .buttonGreen
   @include _button(#3b8070)

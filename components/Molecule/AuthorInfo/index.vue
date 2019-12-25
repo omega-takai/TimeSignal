@@ -51,13 +51,12 @@ export default {
   flex-wrap: wrap
 
 .linkItem
-  margin: 8px
+  margin: pix2rem(8)
 
 .title
   flex: 1 0 100%
-  font-weight: 300
-  font-size: 24px
+  font-weight: TypeWeight('h4')
+  font-size: TypeScale('h4')
   color: #526488
-  word-spacing: 5px
   text-align: center
 </style>
