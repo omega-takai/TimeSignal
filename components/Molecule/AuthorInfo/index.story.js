@@ -1,8 +1,7 @@
 import { storiesOf } from '@storybook/vue'
 import { withKnobs, text, object } from '@storybook/addon-knobs'
-import { FlexLayout, FlexItem } from '@/assets/styledComponent/component'
-
 import AuthorInfo from './index.vue'
+import { FlexLayout, FlexItem } from '@/assets/styledComponent/component'
 
 const defaultObjectA = {
   iconName: 'TwitterIcon',
