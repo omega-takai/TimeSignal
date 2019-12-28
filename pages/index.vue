@@ -1,19 +1,22 @@
 <template lang="pug">
   .pageIndex
     div
-      Typography(
-        :level="1"
-        text="15:10"
-      )
-      Typography.subtitle(
-        :level="2"
-        text="Notify time at regular intervals"
-      )
-      AuthorInfo
+      main.main
+        Typography(
+          class="subColor"
+          :level="4"
+          :text="date"
+        )
+        Typography(
+          :level="1"
+          :text="time"
+        )
+      div
+        AuthorInfo
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 
 import AuthorInfo from '~/components/Molecule/AuthorInfo/index.vue'
 import Typography from '~/components/Atom/Typography/index.vue'
@@ -24,14 +27,31 @@ export default {
     AuthorInfo,
     Typography,
   },
+  data() {
+    return {
+      timer: null,
+    }
+  },
   computed: {
-    ...mapState(['dateObj']),
+    ...mapGetters(['YYYY', 'MM', 'DD', 'hh', 'mm', 'ss']),
+    time() {
+      return `${this.hh}:${this.mm}:${this.ss}`
+    },
+    date() {
+      return `${this.YYYY}/${this.MM}/${this.DD}`
+    },
+  },
+  created() {
+    this.getDate()
   },
   mounted() {
-    this.setTimeSet()
+    this.timer = setInterval(this.getDate, 1000)
+  },
+  destroyed() {
+    clearInterval(this.timer)
   },
   methods: {
-    ...mapActions(['setTimeSet']),
+    ...mapActions(['getDate']),
   },
 }
 </script>
@@ -46,7 +66,9 @@ export default {
   align-items: center
   text-align: center
 
-  .subtitle
+  .main
+    margin: 8rem 0
+
+  .subColor
     color: colors('fontSub')
-    padding-bottom: pix2rem(16)
 </style>
