@@ -1,10 +1,9 @@
 import styled from 'vue-styled-components'
 
-export const AutoGrid = styled.div`
-  display: grid;
-  padding: 1rem;
-  gap: 0.5rem;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+export const Wrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  padding: 1rem 2rem;
 `
 export const FlexLayout = styled.div`
   display: flex;
