@@ -1,10 +1,12 @@
 <template lang="pug">
   a(
     target="_blank"
-    v-text="text"
+    :title="text"
     :href="url"
     :class="className"
   )
+    slot
+    span(v-text="text")
 </template>
 
 <script>
@@ -22,8 +24,7 @@ export default {
     },
     url: {
       type: String,
-      require: true,
-      default: 'https://ja.nuxtjs.org/',
+      default: '###',
     },
   },
   computed: {
@@ -41,25 +42,33 @@ export default {
 
 <style lang="sass" scoped>
 @mixin _structure()
-  height: 48px
-  width: 160px
-  padding: 0 16px
+  min-height: pix2rem(48)
+  min-width: pix2rem(160)
+  padding: pix2rem(8) pix2rem(16)
+  max-width: 90vw
   display: inline-flex
   align-items: center
   justify-content: center
-  line-height: 1
+  line-height: 1.2
 
-@mixin _button($_color)
-  @include _structure()
-  border-radius: 4px
+@mixin _skin($_color)
+  border-radius: pix2rem(4)
   border: 1px solid $_color
   color: $_color
   text-decoration: none
-  text-align: center
   &:hover
     color: white
     background-color: $_color
+  // Extra
+  white-space: pre-line
+  word-wrap: break-word
+  overflow-wrap: break-word
 
+@mixin _button($_color)
+  @include _structure()
+  @include _skin($_color)
+
+// Style Instance ===============
 .buttonGreen
   @include _button(#3b8070)
 

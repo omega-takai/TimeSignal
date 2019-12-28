@@ -1,7 +1,7 @@
 import VueToNuxtLogo from './index.vue'
 
 export default {
-  title: 'Atom|VueToNuxtLogo',
+  title: 'Design System|Atom/VueToNuxtLogo',
 }
 
 export const normal = () => ({
