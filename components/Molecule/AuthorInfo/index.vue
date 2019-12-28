@@ -1,6 +1,9 @@
 <template lang="pug">
   .AuthorInfo
-    h3.title {{ title }}
+    Typography.title(
+      :text="title"
+      :level="3"
+    )
     LinkButtonWithIcon(
       class="linkItem"
       v-for="(val, i) in authorData"
@@ -13,10 +16,12 @@
 
 <script>
 import LinkButtonWithIcon from '~/components/Molecule/LinkButtonWithIcon/index.vue'
+import Typography from '~/components/Atom/Typography/index.vue'
 
 export default {
   name: 'AuthorInfo',
   components: {
+    Typography,
     LinkButtonWithIcon,
   },
   props: {
@@ -55,8 +60,6 @@ export default {
 
 .title
   flex: 1 0 100%
-  font-weight: TypeWeight('h4')
-  font-size: TypeScale('h4')
   color: #526488
   text-align: center
 </style>
