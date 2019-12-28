@@ -13,6 +13,8 @@
 </template>
 
 <script>
+import { mapActions, mapState } from 'vuex'
+
 import AuthorInfo from '~/components/Molecule/AuthorInfo/index.vue'
 import Typography from '~/components/Atom/Typography/index.vue'
 
@@ -21,6 +23,15 @@ export default {
   components: {
     AuthorInfo,
     Typography,
+  },
+  computed: {
+    ...mapState(['dateObj']),
+  },
+  mounted() {
+    this.setTimeSet()
+  },
+  methods: {
+    ...mapActions(['setTimeSet']),
   },
 }
 </script>
