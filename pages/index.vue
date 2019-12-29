@@ -8,6 +8,7 @@
           :text="date"
         )
         Typography(
+          class="time"
           :level="1"
           :text="time"
         )
@@ -68,6 +69,12 @@ export default {
 
   .main
     margin: 8rem 0
+
+  .time
+    font:
+      family: TypeFamily('number')
+      weight: TypeWeight('number')
+
 
   .subColor
     color: colors('fontSub')
