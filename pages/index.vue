@@ -2,45 +2,27 @@
   .pageIndex
     div
       main.main
-        Typography(
-          class="subColor"
-          :level="4"
-          :text="date"
-        )
-        Typography(
-          class="time"
-          :level="1"
-          :text="time"
-        )
+        DigitalClock
       div
         AuthorInfo
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import { mapActions } from 'vuex'
 
 import AuthorInfo from '~/components/Molecule/AuthorInfo/index.vue'
-import Typography from '~/components/Atom/Typography/index.vue'
+import DigitalClock from '~/components/Organism/DigitalClock/index.vue'
 
 export default {
   name: 'PageIndex',
   components: {
     AuthorInfo,
-    Typography,
+    DigitalClock,
   },
   data() {
     return {
       timer: null,
     }
-  },
-  computed: {
-    ...mapGetters(['YYYY', 'MM', 'DD', 'hh', 'mm', 'ss']),
-    time() {
-      return `${this.hh}:${this.mm}:${this.ss}`
-    },
-    date() {
-      return `${this.YYYY}/${this.MM}/${this.DD}`
-    },
   },
   created() {
     this.getDate()
@@ -69,12 +51,6 @@ export default {
 
   .main
     margin: 8rem 0
-
-  .time
-    font:
-      family: TypeFamily('number')
-      weight: TypeWeight('number')
-
 
   .subColor
     color: colors('fontSub')
