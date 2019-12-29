@@ -3,20 +3,17 @@
     div
       main.main
         DigitalClock
-      div
-        AuthorInfo
 </template>
 
 <script>
 import { mapActions } from 'vuex'
 
-import AuthorInfo from '~/components/Molecule/AuthorInfo/index.vue'
+// import AuthorInfo from '~/components/Molecule/AuthorInfo/index.vue'
 import DigitalClock from '~/components/Organism/DigitalClock/index.vue'
 
 export default {
   name: 'PageIndex',
   components: {
-    AuthorInfo,
     DigitalClock,
   },
   data() {
@@ -51,7 +48,4 @@ export default {
 
   .main
     margin: 8rem 0
-
-  .subColor
-    color: colors('fontSub')
 </style>

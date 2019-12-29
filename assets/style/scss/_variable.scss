@@ -1,6 +1,8 @@
 // global
 // variables
 
+@import 'base';
+
 // screen size - - - - - - - - - - - - - - - -
 // ref: https://hashimotosan.hatenablog.jp/entry/2019/05/28/164834
 $screens: (
@@ -32,7 +34,7 @@ $fonts: (
   "normal": 400,
   "bold": 700, // iOS激太り対策
   "extraBold": 900,
-  "size": 16,
+  "size": $rootFontSize,
   "kerning": 'palt',
   "space": 0.1em,
   "lineHeight": 1.5,
@@ -55,15 +57,17 @@ $TypeFamily: (
   @return map-get($TypeFamily, $key);
 }
 
+// Like a Modular Scale
 $TypeScale: (
-  "h1": 6.00rem, // 96px
-  "h2": 3.75rem, // 60px
-  "h3": 4.8rem * 0.625, // 48px
-  "h4": 3.4rem * 0.625, // 34px
-  "subtitle": 1.6rem * 0.625, // 16px
-  "body": 1.4rem * 0.625, // 14px
-  "caption": 1.2rem * 0.625, // 12px
-  "overline": 1.0rem * 0.625, // 10px
+  "extraLarge": pix2rem(287),
+  "h1": pix2rem(177),
+  "h2": pix2rem(110),
+  "h3": pix2rem(68),
+  "h4": pix2rem(42),
+  "subtitle": pix2rem(26),
+  "body": pix2rem(16),
+  "caption": pix2rem(12),
+  "overline": pix2rem(10),
 );
 @function TypeScale($key) {
   @return map-get($TypeScale, $key);
