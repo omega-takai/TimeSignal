@@ -1,45 +1,26 @@
 <template lang="pug">
   .pageIndex
-    div
-      main.main
-        Typography(
-          class="subColor"
-          :level="4"
-          :text="date"
-        )
-        Typography(
-          :level="1"
-          :text="time"
-        )
-      div
-        AuthorInfo
+    Indicator.base
+    DigitalClock
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import { mapActions } from 'vuex'
 
-import AuthorInfo from '~/components/Molecule/AuthorInfo/index.vue'
-import Typography from '~/components/Atom/Typography/index.vue'
+// import AuthorInfo from '~/components/Molecule/AuthorInfo/index.vue'
+import DigitalClock from '~/components/Organism/DigitalClock/index.vue'
+import Indicator from '~/components/Organism/Indicator/index.vue'
 
 export default {
   name: 'PageIndex',
   components: {
-    AuthorInfo,
-    Typography,
+    DigitalClock,
+    Indicator,
   },
   data() {
     return {
       timer: null,
     }
-  },
-  computed: {
-    ...mapGetters(['YYYY', 'MM', 'DD', 'hh', 'mm', 'ss']),
-    time() {
-      return `${this.hh}:${this.mm}:${this.ss}`
-    },
-    date() {
-      return `${this.YYYY}/${this.MM}/${this.DD}`
-    },
   },
   created() {
     this.getDate()
@@ -58,17 +39,18 @@ export default {
 
 <style lang="sass" scoped>
 .pageIndex
-  margin: 0 auto
+  position: relative
   min-height: 100vh
+  width: 100vw
+  margin: 0 auto
   display: flex
   justify-content: center
   align-content: center
   align-items: center
-  text-align: center
 
-  .main
-    margin: 8rem 0
-
-  .subColor
-    color: colors('fontSub')
+  .base
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
 </style>

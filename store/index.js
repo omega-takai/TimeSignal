@@ -1,6 +1,6 @@
 // Utils ==============================
-const zeroPadding = (num) => {
-  const stringNumber = ('0000' + num).slice(-2)
+const zeroPadding = (num, length = 2) => {
+  const stringNumber = ('0000' + num).slice(-length)
   return stringNumber
   // console.log('zeroPadding', stringNumber)
   // return parseInt(stringNumber, 10)
@@ -13,7 +13,8 @@ export const state = () => ({
 
 export const getters = {
   YYYY: (state) => {
-    return state.dateObj.getFullYear()
+    const year = state.dateObj.getFullYear()
+    return zeroPadding(year, 4)
   },
   MM: (state) => {
     // (January gives 0)
