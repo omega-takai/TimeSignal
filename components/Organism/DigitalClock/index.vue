@@ -35,4 +35,5 @@ export default {
 <style lang="sass" scoped>
 .digitalClock
   padding-bottom: TypeScale('h4')
+  text-align: center
 </style>

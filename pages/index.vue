@@ -47,7 +47,6 @@ export default {
   justify-content: center
   align-content: center
   align-items: center
-  text-align: center
 
   .base
     position: absolute

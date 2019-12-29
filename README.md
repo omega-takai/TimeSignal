@@ -41,9 +41,8 @@ $ yarn generate:gh-pages
 
 ## References
 
-- [Nuxt.js docs](https://ja.nuxtjs.org/).
-- [Vue.js Lifecycle Diagram](https://jp.vuejs.org/v2/guide/instance.html#ライフサイクルダイアグラム).
-- [The type system - Material Design](https://material.io/design/typography/the-type-system.html).
-- [Sass: sass:math](https://sass-lang.com/documentation/modules/math).
-- [Pug](https://pugjs.org/api/getting-started.html).
-- [Date.prototype.getMonth() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth).
+- [Nuxt.js docs](https://ja.nuxtjs.org/)
+- [Vue.js Lifecycle Diagram](https://jp.vuejs.org/v2/guide/instance.html#ライフサイクルダイアグラム)
+- [Sass: sass:math](https://sass-lang.com/documentation/modules/math)
+- [Pug](https://pugjs.org/api/getting-started.html)
+- [Date.prototype.getMonth() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth)
