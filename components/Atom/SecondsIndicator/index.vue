@@ -28,7 +28,7 @@ export default {
     },
     computedStyle() {
       return {
-        transform: `rotate(${this.sec2deg}deg)`
+        transform: `rotate(${this.sec2deg}deg)`,
       }
     },
     showLeft() {
@@ -56,11 +56,11 @@ $_fillColor: #CDF2E9
 
   .fillWrapper
     position: absolute
-    width: 200%
-    height: 200%
+    width: 300%
+    height: 300%
     background-color: $_bgColor
-    top: -50%
-    left: -50%
+    top: -100%
+    left: -100%
 
     .fillWite
       @include _childElement()
