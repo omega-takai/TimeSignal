@@ -1,8 +1,6 @@
 <template lang="pug">
   .pageIndex
-    div
-      main.main
-        DigitalClock
+    DigitalClock
 </template>
 
 <script>
@@ -45,7 +43,4 @@ export default {
   align-content: center
   align-items: center
   text-align: center
-
-  .main
-    margin: 8rem 0
 </style>

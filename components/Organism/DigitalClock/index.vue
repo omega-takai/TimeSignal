@@ -1,29 +1,27 @@
 <template lang="pug">
-  .digitalClock
-    Typography(
-      class="subColor"
-      :level="4"
+  p.digitalClock
+    BaseTime(
       :text="date"
+      :isTime="false"
     )
-    Typography(
-      class="time"
-      :level="1"
+    BaseTime(
       :text="time"
+      :isTime="true"
     )
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 
-import Typography from '~/components/Atom/Typography/index.vue'
+import BaseTime from '~/components/Atom/BaseTime/index.vue'
 
 export default {
   name: 'DigitalClock',
   components: {
-    Typography,
+    BaseTime,
   },
   computed: {
-    ...mapGetters(['YYYY', 'MM', 'DD', 'hh', 'mm', 'ss']),
+    ...mapGetters(['YYYY', 'MM', 'DD', 'hh', 'mm']),
     time() {
       return `${this.hh}:${this.mm}`
     },
@@ -36,11 +34,5 @@ export default {
 
 <style lang="sass" scoped>
 .digitalClock
-  .time
-    font:
-      family: TypeFamily('number')
-      weight: TypeWeight('number')
-
-  .subColor
-    color: colors('fontSub')
+  padding-bottom: TypeScale('h4')
 </style>
