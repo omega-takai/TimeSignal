@@ -1,21 +1,23 @@
 # TimeSignal
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/583e6094-4f8e-4073-9b34-3a0ca8c912ab/deploy-status)](https://app.netlify.com/sites/ttakai-time-signal/deploys)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/2c0f8b89-4566-47d8-999e-0672005c081a/deploy-status)](https://app.netlify.com/sites/ttakai-time-signal-storybook/deploys)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/t--takai/TimeSignal/blob/master/LICENSE)
 
 > Notify time at regular intervals
 
 ## DEMO
 
-### Web App
+- Web App [![Netlify Status](https://api.netlify.com/api/v1/badges/583e6094-4f8e-4073-9b34-3a0ca8c912ab/deploy-status)](https://app.netlify.com/sites/ttakai-time-signal/deploys): [ttakai-time-signal](https://ttakai-time-signal.netlify.com/)
+- Storybook [![Netlify Status](https://api.netlify.com/api/v1/badges/2c0f8b89-4566-47d8-999e-0672005c081a/deploy-status)](https://app.netlify.com/sites/ttakai-time-signal-storybook/deploys): [ttakai-time-signal-storybook](https://ttakai-time-signal-storybook.netlify.com)
 
-https://ttakai-time-signal.netlify.com/
+## Features
 
-### Storybook
+- Can be developed OFFLINE after `$ yarn install`
+- Generate Static
+- Nuxt.js v2.5.0
+- Vuex
+- Storybook
 
-https://ttakai-time-signal-storybook.netlify.com
-
-## Build Setup
+## How to Develop
 
 ``` bash
 # install dependencies
@@ -35,4 +37,11 @@ $ yarn generate
 $ yarn generate:gh-pages
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://ja.nuxtjs.org/).
+## References
+
+- [Nuxt.js docs](https://ja.nuxtjs.org/).
+- [Vue.js Lifecycle Diagram](https://jp.vuejs.org/v2/guide/instance.html#ライフサイクルダイアグラム).
+- [The type system - Material Design](https://material.io/design/typography/the-type-system.html).
+- [Sass: sass:math](https://sass-lang.com/documentation/modules/math).
+- [Pug](https://pugjs.org/api/getting-started.html).
+- [Date.prototype.getMonth() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth).
