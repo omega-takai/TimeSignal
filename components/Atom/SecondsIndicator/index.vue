@@ -1,6 +1,9 @@
 <template lang="pug">
   .secondsIndicator
-    .fillWrapper(:style="computedStyle")
+    .fillWrapper(
+      :style="computedStyle"
+      :class="computedClass"
+    )
       .fillWite
     .maskLeft(v-show="showLeft")
     .maskRight(v-show="!showLeft")
@@ -29,6 +32,12 @@ export default {
     computedStyle() {
       return {
         transform: `rotate(${this.sec2deg}deg)`,
+      }
+    },
+    computedClass() {
+      const sec = this.parsedSeconds
+      return {
+        isAnimate: sec > 0,
       }
     },
     showLeft() {
@@ -61,6 +70,8 @@ $_fillColor: #CDF2E9
     background-color: $_bgColor
     top: -100%
     left: -100%
+    &.isAnimate
+      transition: transform 0.9s cubic-bezier(0.65, 0.05, 0.36, 1)
 
     .fillWite
       @include _childElement()
