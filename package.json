@@ -20,7 +20,7 @@
     "build-storybook": "build-storybook -c .storybook -o .out"
   },
   "dependencies": {
-    "@nuxtjs/axios": "5.8.0",
+    "@nuxtjs/axios": "5.9.0",
     "@nuxtjs/style-resources": "1.0.0",
     "core-js": "2.6.11",
     "modern-css-reset": "1.0.4",
