@@ -53,7 +53,7 @@
     "pug": "2.0.4",
     "pug-plain-loader": "1.0.0",
     "rimraf": "3.0.0",
-    "sass": "1.23.7",
+    "sass": "1.24.0",
     "sass-loader": "8.0.0",
     "sass-resources-loader": "2.0.1",
     "vue-jest": "4.0.0-beta.2"
