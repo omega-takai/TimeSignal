@@ -24,7 +24,7 @@
     "@nuxtjs/style-resources": "1.0.0",
     "core-js": "2.6.11",
     "modern-css-reset": "1.0.4",
-    "nuxt": "2.10.2",
+    "nuxt": "2.11.0",
     "vue-feather-icons": "5.0.0",
     "vue-styled-components": "1.4.14"
   },
