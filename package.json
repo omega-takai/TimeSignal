@@ -21,12 +21,12 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "5.8.0",
-    "@nuxtjs/style-resources": "^1.0.0",
+    "@nuxtjs/style-resources": "1.0.0",
     "core-js": "2.6.10",
     "modern-css-reset": "1.0.4",
     "nuxt": "2.10.2",
     "vue-feather-icons": "5.0.0",
-    "vue-styled-components": "^1.4.14"
+    "vue-styled-components": "1.4.14"
   },
   "devDependencies": {
     "@babel/core": "7.7.4",
@@ -42,7 +42,7 @@
     "babel-jest": "24.9.0",
     "babel-loader": "8.0.6",
     "babel-preset-vue": "2.0.2",
-    "cross-env": "^6.0.3",
+    "cross-env": "6.0.3",
     "eslint": "6.7.2",
     "eslint-config-prettier": "6.7.0",
     "eslint-plugin-nuxt": "0.5.0",
@@ -55,7 +55,7 @@
     "rimraf": "3.0.0",
     "sass": "1.23.7",
     "sass-loader": "8.0.0",
-    "sass-resources-loader": "^2.0.1",
+    "sass-resources-loader": "2.0.1",
     "vue-jest": "4.0.0-beta.2"
   },
   "browserslist": [
