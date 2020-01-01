@@ -7,7 +7,6 @@ const zeroPadding = (num, length = 2) => {
 // Vuex Modules ==============================
 export const state = () => ({
   dateObj: {},
-  // ref: https://hashimotosan.hatenablog.jp/entry/2019/05/28/164834
   isDesktop: true,
   isMobile: false,
 })

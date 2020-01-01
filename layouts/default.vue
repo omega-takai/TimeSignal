@@ -11,7 +11,7 @@ export default {
   data() {
     return {
       // ref: https://hashimotosan.hatenablog.jp/entry/2019/05/28/164834
-      matchQueryMobile: '(max-width: 768px)',
+      matchQueryMobile: '(max-width: 560px)',
     }
   },
   computed: {
