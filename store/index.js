@@ -2,13 +2,13 @@
 const zeroPadding = (num, length = 2) => {
   const stringNumber = ('0000' + num).slice(-length)
   return stringNumber
-  // console.log('zeroPadding', stringNumber)
-  // return parseInt(stringNumber, 10)
 }
 
 // Vuex Modules ==============================
 export const state = () => ({
   dateObj: {},
+  isDesktop: true,
+  isMobile: false,
 })
 
 export const getters = {
@@ -19,8 +19,6 @@ export const getters = {
   MM: (state) => {
     // (January gives 0)
     const M = state.dateObj.getMonth() + 1
-    // const MM = zeroPadding(M)
-    // console.log('getters: MM', M, MM)
     return zeroPadding(M)
   },
   DD: (state) => {
@@ -45,12 +43,28 @@ export const mutations = {
   setDateObject: (state, dateObj) => {
     state.dateObj = dateObj
   },
+  setFlagDesktop: (state) => {
+    state.isDesktop = true
+    state.isMobile = false
+  },
+  setFlagMobile: (state) => {
+    state.isDesktop = false
+    state.isMobile = true
+  },
 }
 
 export const actions = {
   getDate({ commit }) {
     const date = new Date()
-    // console.log('actions getDate', date)
     commit('setDateObject', date)
+  },
+  setDeviceFlag({ commit }, bool) {
+    if (bool) {
+      // console.log('setDeviceFlag: isMobile')
+      commit('setFlagMobile')
+    } else {
+      // console.log('setDeviceFlag: isDesktop')
+      commit('setFlagDesktop')
+    }
   },
 }
