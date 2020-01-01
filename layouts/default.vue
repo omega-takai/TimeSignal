@@ -8,33 +8,39 @@ import { mapActions, mapState } from 'vuex'
 
 export default {
   name: 'LayoutDefault',
+  data() {
+    return {
+      // ref: https://hashimotosan.hatenablog.jp/entry/2019/05/28/164834
+      matchQueryMobile: '(max-width: 768px)',
+    }
+  },
   computed: {
-    ...mapState(['isDesktop', 'isTablet', 'isMobile']),
+    ...mapState(['isDesktop', 'isMobile']),
     classNameObject() {
       return {
         'is-desktop': this.isDesktop,
-        'is-tablet': this.isTablet,
         'is-mobile': this.isMobile,
       }
     },
   },
-  // created() {
-  //   this.setDeviceFlag(window.innerWidth)
-  // },
-  beforeMount() {
-    this.hadleResize()
-  },
   mounted() {
-    window.addEventListener('resize', this.hadleResize())
+    this.$nextTick(() => {
+      // SEE: https://developer.mozilla.org/ja/docs/Web/API/Window/matchMedia
+      const mqMobile = window.matchMedia(this.matchQueryMobile)
+      this.matchMobile(mqMobile)
+      mqMobile.addListener(this.matchMobile)
+    })
   },
   destroyed() {
-    window.removeEventListener('resize', this.hadleResize())
+    const mqMobile = window.matchMedia(this.matchQueryMobile)
+    this.matchMobile(mqMobile)
+    mqMobile.removeListener(this.matchMobile)
   },
   methods: {
     ...mapActions(['setDeviceFlag']),
-    hadleResize() {
-      this.setDeviceFlag(window.innerWidth)
-      console.log('Fire hadleResize')
+    matchMobile(mql) {
+      console.log('Fire matchMobile', mql.matches)
+      this.setDeviceFlag(mql.matches)
     },
   },
 }
